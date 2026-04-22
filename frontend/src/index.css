@@ -1,0 +1,12 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0197c0ab;
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+    background: transparent;
+}
