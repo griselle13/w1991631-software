@@ -111,7 +111,6 @@ const Cognitive = () => {
     return (
         <div style={{ maxWidth: 900, margin: "40px auto" }}>
             <h1>Cognitive Practice</h1>
-// ADMIN PANEL
             {isAdmin && (
                 <div style={{ padding: 20, border: "1px solid #ccc" }}>
                     <h2>Admin Panel - Add Question</h2>
@@ -151,7 +150,6 @@ const Cognitive = () => {
                 </div>
             )}
 
-// QUESTIONS LIST
             <h2>Questions</h2>
 
             {questions.length === 0 && <p>No questions yet</p>}
@@ -160,7 +158,7 @@ const Cognitive = () => {
                 <div key={q._id} style={{ padding: 10, border: "1px solid #ddd", marginBottom: 15 }}>
                     <h3>{q.question}</h3>
 
-//mcq
+
                     {q.type === "mcq" && (
                         <>
                             {q.options.map((opt, i) => {
@@ -193,7 +191,6 @@ const Cognitive = () => {
                                 );
                             })}
 
-//User only buttons
                             {!isAdmin && (
                                 <div style={{ marginTop: 10 }}>
                                     <button onClick={() => submitMCQ(q._id)}>
@@ -214,7 +211,6 @@ const Cognitive = () => {
                         </>
                     )}
 
-//fill in the blank
                     {q.type === "fill" && (
                         <>
                             <input
@@ -248,7 +244,6 @@ const Cognitive = () => {
                         </>
                     )}
 
-// ADMIN EDIT/DELETE
                     {isAdmin && (
                         <div style={{ marginTop: 10 }}>
                             <button
@@ -270,7 +265,6 @@ const Cognitive = () => {
                         </div>
                     )}
 
-// ADMIN EDIT FORM
                     {isAdmin && editingId === q._id && (
                         <div style={{ marginTop: 10, padding: 10, border: "1px solid #aaa" }}>
                             <input

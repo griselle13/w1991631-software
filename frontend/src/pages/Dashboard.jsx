@@ -82,7 +82,7 @@ const badgeData = [
 const Dashboard = () => {
     return (
         <div style={{ padding: "40px" }}>
-            <h1 style={{ textAlign: "center" }}>🏆 Learning Dashboard</h1>
+            <h1 style={{ textAlign: "center" }}>Learning Dashboard</h1>
 
             {badgeData.map((section, index) => (
                 <div key={index} style={{ marginBottom: "40px" }}>
